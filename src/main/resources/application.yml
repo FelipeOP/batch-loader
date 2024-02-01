@@ -1,0 +1,26 @@
+spring:
+  batch:
+    jdbc:
+      initialize-schema: always
+    job:
+      enabled: true
+  datasource:
+    driverClassName: org.h2.Driver
+    password: ""
+    url: jdbc:h2:mem:logdb
+    username: sa
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    show-sql: true
+
+logging:
+  pattern:
+    console: '[%d{"yyyy-MM-dd HH:mm:ss"}] (%class.%method:%line\)%n[%level]: %msg%n'
+
+batch:
+  dir:
+    input: C:\AzureRepos\.probes\Documentos.in
